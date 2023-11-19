@@ -19,3 +19,9 @@
 
 # Go workspace file
 go.work
+
+# DB file
+*.sqlite3
+
+# Compiled binaries
+dist
