@@ -80,7 +80,7 @@ func includesFile(input string) bool {
 	// Check against file headers
 	for i := 0; i < len(fileHeaders); i++ {
 		if bytes.HasPrefix(decoded, fileHeaders[i]) {
-			log.Println("File detected with header" + string(fileHeaders[i]))
+			log.Println("File detected with header: " + string(fileHeaders[i]))
 			return true
 		}
 	}
@@ -219,7 +219,7 @@ func main() {
 		key := r.URL.Query().Get("key")
 
 		var data struct {
-			Val string `json:"val"`
+			Val string `json:"value"`
 		}
 		err = json.NewDecoder(r.Body).Decode(&data)
 		if err != nil {
