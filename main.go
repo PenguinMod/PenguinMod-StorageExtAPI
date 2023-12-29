@@ -14,7 +14,7 @@ import (
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
-	_ "github.com/mattn/go-sqlite3"
+	_ "github.com/glebarez/go-sqlite"
 )
 
 var totalRequests int
@@ -113,7 +113,7 @@ func jsonSuccess(w http.ResponseWriter) {
 
 func main() {
 	// Initialise database connection
-	db, err := sql.Open("sqlite3", "db.sqlite3")
+	db, err := sql.Open("sqlite", "db.sqlite")
 	if err != nil {
 		log.Fatalln(err)
 	}
