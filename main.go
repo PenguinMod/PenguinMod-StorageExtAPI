@@ -113,7 +113,7 @@ func jsonSuccess(w http.ResponseWriter) {
 
 func main() {
 	// Initialise database connection
-	db, err := sql.Open("sqlite3", "db.sqlite3")
+	db, err := sql.Open("sqlite", "db.sqlite")
 	if err != nil {
 		log.Fatalln(err)
 	}
