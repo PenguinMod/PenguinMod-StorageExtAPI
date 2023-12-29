@@ -14,7 +14,7 @@ import (
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
-	_ "github.com/mattn/go-sqlite3"
+	_ "github.com/glebarez/go-sqlite"
 )
 
 var totalRequests int
